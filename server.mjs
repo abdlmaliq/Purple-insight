@@ -16,8 +16,7 @@ const mime = {
   '.ico': 'image/x-icon'
 };
 const aliases = {
-  '/manus-routes.json': join(root, 'public', 'manus-routes.json'),
-  '/pi-logo-transparent.png': join(root, 'public', 'pi-logo-transparent.png')
+  '/manus-routes.json': join(root, 'public', 'manus-routes.json')
 };
 
 const server = createServer(async (req, res) => {
