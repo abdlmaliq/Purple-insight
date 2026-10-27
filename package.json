@@ -5,6 +5,6 @@
   "type": "module",
   "scripts": {
     "start": "node server.mjs",
-    "build": "mkdir -p dist && cp index.html styles.css script.js dist/ && cp -r public dist/public"
+    "build": "mkdir -p dist && cp index.html styles.css script.js dist/ && cp -r public dist/public && cp public/pi-logo-transparent.png dist/pi-logo-transparent.png"
   }
 }
