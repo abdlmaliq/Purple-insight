@@ -126,6 +126,22 @@ h1 em { color: var(--lilac); }
 .icon-nodes i { left: 41px; top: 57px; width: 8px; height: 8px; background: var(--white); }
 .icon-nodes::before, .icon-nodes::after { content: ""; position: absolute; left: 16px; top: 42px; width: 51px; height: 1px; transform: rotate(-38deg); background: var(--purple-deep); transform-origin: left; }
 .icon-nodes::after { top: 46px; left: 49px; width: 49px; transform: rotate(38deg); }
+.icon-culture { position: relative; width: 90px; height: 90px; }
+.icon-culture span { position: absolute; border-radius: 50%; box-sizing: border-box; }
+
+/* globe + meridians */
+.icon-culture span:nth-child(1) { width: 76px; height: 76px; top: 7px;  left: 7px;  border: 1px solid rgba(255,255,255,.55); }
+.icon-culture span:nth-child(2) { width: 30px; height: 76px; top: 7px;  left: 30px; border: 1px solid #fa70d4; transform: rotate(-33deg); }
+.icon-culture span:nth-child(3) { width: 76px; height: 30px; top: 30px; left: 7px;  border: 1px solid #9ce7ff; transform: rotate(-33deg); }
+
+/* cultures on the rim */
+.icon-culture span:nth-child(4) { width: 8px; height: 8px; top: 3px;  left: 41px; background: #fff; }
+.icon-culture span:nth-child(5) { width: 8px; height: 8px; top: 60px; left: 74px; background: #fa70d4; }
+.icon-culture span:nth-child(6) { width: 8px; height: 8px; top: 60px; left: 8px;  background: #9ce7ff; }
+
+/* self-awareness */
+.icon-culture span:nth-child(7) { width: 12px; height: 12px; top: 39px; left: 39px; background: #fff; opacity: .9; }
+
 .service-card h3 { margin-bottom: 17px; font-size: clamp(31px, 4vw, 52px); line-height: .92; letter-spacing: -.08em; font-weight: 700; }
 .service-card-dark h3 em { color: var(--lilac); }
 .service-card-light h3 em { color: var(--purple-deep); }
