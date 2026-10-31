@@ -253,9 +253,9 @@ h1 em { color: var(--lilac); }
 
 @media (max-width: 600px) {
   :root { --shell: calc(100% - 40px); }
-  .social-rail { top: auto; right: 16px; bottom: 16px; flex-direction: row; transform: none; }
-  .social-rail-link { width: 48px; height: 48px; padding: 0 13px; border-radius: 15px; }
-  .social-rail-link:hover, .social-rail-link:focus-visible { width: 48px; }
+  .social-rail { top: 50%; right: 18px; bottom: auto; flex-direction: column; transform: translateY(-50%); }
+  .social-rail-link, .social-rail-link:hover, .social-rail-link:focus-visible { width: 54px; height: 54px; padding: 0 16px; border-radius: 17px; transition: none; }
+  .social-rail-link svg, .social-rail-link:hover svg, .social-rail-link:focus-visible svg { transform: none; transition: none; }
   .social-rail-link span { display: none; }
   .hero { padding-top: 146px; }
   .eyebrow { max-width: 290px; flex-wrap: wrap; line-height: 1.6; }
