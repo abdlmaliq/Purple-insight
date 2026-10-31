@@ -208,6 +208,18 @@ h1 em { color: var(--lilac); }
 .footer-meta { display: flex; gap: 30px; align-items: center; }
 .footer-meta a { color: var(--purple-deep); font-weight: 800; }
 
+.social-rail { position: fixed; z-index: 25; top: 50%; right: 18px; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; transform: translateY(-50%); }
+.social-rail-link { display: flex; flex: 0 0 auto; flex-direction: row-reverse; width: 54px; height: 54px; align-items: center; gap: 13px; overflow: hidden; padding: 0 16px; border: 1px solid rgba(255,255,255,.16); border-radius: 17px; color: var(--white); background: rgba(20,19,34,.82); box-shadow: 0 8px 26px rgba(5,4,15,.2); backdrop-filter: blur(14px); transition: width .7s cubic-bezier(.22,1,.36,1), border-color .35s ease, background .35s ease, box-shadow .5s ease; }
+.social-rail-link:hover, .social-rail-link:focus-visible { width: 190px; border-color: rgba(255,255,255,.35); background: rgba(35,27,61,.96); box-shadow: 0 14px 36px rgba(5,4,15,.3); }
+.social-rail-link:focus-visible { outline: 2px solid var(--lilac); outline-offset: 3px; }
+.social-rail-link svg { width: 20px; height: 20px; flex: 0 0 20px; fill: currentColor; transition: transform .6s cubic-bezier(.16,1,.3,1); }
+.social-rail-link:hover svg, .social-rail-link:focus-visible svg { transform: scale(1.08); }
+.social-rail-link span { overflow: hidden; color: rgba(255,255,255,.88); font-size: 10px; font-weight: 700; white-space: nowrap; opacity: 0; transform: translateX(14px); transition: opacity .3s ease .08s, transform .7s cubic-bezier(.22,1,.36,1); }
+.social-rail-link:hover span, .social-rail-link:focus-visible span { opacity: 1; transform: translateX(0); }
+.social-rail-phone svg { color: #ff83df; }
+.social-rail-x svg { color: #d7c6ff; }
+.social-rail-linkedin svg { color: #7bd5ff; }
+
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
 .reveal.is-visible { opacity: 1; transform: none; }
 .reveal-delay { transition-delay: .12s; }
@@ -241,6 +253,10 @@ h1 em { color: var(--lilac); }
 
 @media (max-width: 600px) {
   :root { --shell: calc(100% - 40px); }
+  .social-rail { top: auto; right: 16px; bottom: 16px; flex-direction: row; transform: none; }
+  .social-rail-link { width: 48px; height: 48px; padding: 0 13px; border-radius: 15px; }
+  .social-rail-link:hover, .social-rail-link:focus-visible { width: 48px; }
+  .social-rail-link span { display: none; }
   .hero { padding-top: 146px; }
   .eyebrow { max-width: 290px; flex-wrap: wrap; line-height: 1.6; }
   h1 { font-size: clamp(53px, 15vw, 80px); }
